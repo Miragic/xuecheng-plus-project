@@ -4,6 +4,7 @@ import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
 import com.xuecheng.content.model.dto.AddCourseDto;
 import com.xuecheng.content.model.dto.CourseBaseInfoDto;
+import com.xuecheng.content.model.dto.EditCourseDto;
 import com.xuecheng.content.model.dto.QueryCourseParamsDto;
 import com.xuecheng.content.model.po.CourseBase;
 
@@ -32,4 +33,31 @@ public interface CourseBaseInfoService {
      * @Param [companyId, addCourseDto]
      **/
     CourseBaseInfoDto createCourseBase(Long companyId, AddCourseDto addCourseDto);
+
+    /**
+     * @return com.xuecheng.content.model.dto.CourseBaseInfoDto
+     * @Author Miragic
+     * @Description 根据课程id查询课程基本信息，包括基本信息和营销信息
+     * @Date 2023/9/8 15:24
+     * @Param [courseId]
+     **/
+    CourseBaseInfoDto getCourseBaseInfo(long courseId);
+
+    /**
+     * @return com.xuecheng.content.model.dto.CourseBaseInfoDto
+     * @Author Miragic
+     * @Description 修改课程信息
+     * @Date 2023/9/8 16:41
+     * @Param [companyId, editCourseDto]
+     **/
+    CourseBaseInfoDto updateCourseBase(Long companyId, EditCourseDto editCourseDto);
+
+    /**
+     * @return void
+     * @Author Miragic
+     * @Description 删除课程
+     * @Date 2023/9/9 11:41
+     * @Param [companyId, courseId]
+     **/
+    void deleteCourse(Long companyId, Long courseId);
 }

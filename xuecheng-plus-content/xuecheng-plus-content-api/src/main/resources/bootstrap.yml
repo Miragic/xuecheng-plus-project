@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-path: /api/content
+    context-path: /content
   port: 63040
 #微服务配置
 spring:
